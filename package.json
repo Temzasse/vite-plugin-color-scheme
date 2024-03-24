@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-color-scheme",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vite plugin determining the color scheme of the user's operating system",
   "keywords": [
     "vite",
