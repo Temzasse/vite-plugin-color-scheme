@@ -29,6 +29,7 @@
     "watch": "tsup --watch --config tsup.config.ts --onSuccess \"npm run example:sync\"",
     "build": "tsup --config tsup.config.ts",
     "build:sync": "npm run build -- --onSuccess \"npm run example:sync\"",
+    "example:link": "yalc publish --push && cd example && yalc add vite-plugin-color-scheme && npm i",
     "example:sync": "yalc push && cd example && npm i"
   },
   "devDependencies": {
