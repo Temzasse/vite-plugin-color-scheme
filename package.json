@@ -1,0 +1,40 @@
+{
+  "name": "vite-plugin-color-scheme",
+  "version": "0.1.0",
+  "description": "Vite plugin determining the color scheme of the user's operating system",
+  "keywords": [
+    "vite",
+    "vite plugin",
+    "color scheme",
+    "dark mode",
+    "light mode"
+  ],
+  "author": "Teemu Taskula",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsup --watch --config tsup.config.ts --onSuccess \"npm run example:sync\"",
+    "build": "tsup --config tsup.config.ts",
+    "build:sync": "npm run build -- --onSuccess \"npm run example:sync\"",
+    "example:sync": "yalc push && cd example && npm i"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "tsup": "8.0.2",
+    "typescript": "5.4.3",
+    "vite": "5.2.4"
+  }
+}
